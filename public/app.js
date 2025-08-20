@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const inputElement = document.getElementById("list-add");
     const buttonListAddElement = document.getElementsByClassName("btn")[0];
 
-    // 1 - Criar lista inicial
     const ul = document.createElement("ul");
     toDos.forEach(todo => {
         const li = document.createElement("li");
@@ -33,7 +32,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     listWrapper.appendChild(ul);
 
-    // 2 - Listener para adicionar nova tarefa
     buttonListAddElement.addEventListener("click", (event) => {
         event.preventDefault();
         const inputValue = inputElement.value.trim();
